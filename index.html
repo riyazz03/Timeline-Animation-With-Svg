@@ -1,0 +1,258 @@
+<!-- Home Achievements Mobile Animation -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!window.matchMedia("(max-width: 768px)").matches) return;
+    gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
+    const hr = document.querySelector(".vertical-animated-line-about");
+
+    gsap.from(hr, {
+      scrollTrigger: {
+        trigger: ".section_home_achievements",
+        start: "top 70%",
+        end: "bottom 70%",
+        scrub: true,
+        ease: "none",
+      },
+      height: "0%",
+      ease: "none",
+    });
+
+    gsap.from(".achievement_1 .timeline_content_line", {
+      scrollTrigger: {
+        trigger: ".achievement_1 .timeline_content_line",
+        start: "top 70%",
+        end: "bottom 60%",
+        scrub: true,
+      },
+      width: "0rem",
+    });
+    gsap.from(".achievement_2 .timeline_content_line", {
+      scrollTrigger: {
+        trigger: ".achievement_2 .timeline_content_line",
+        start: "top 70%",
+        end: "bottom 60%",
+        scrub: true,
+      },
+      width: "0rem",
+    });
+    gsap.from(".achievement_3 .timeline_content_line", {
+      scrollTrigger: {
+        trigger: ".achievement_3 .timeline_content_line",
+        start: "top 70%",
+        end: "bottom 60%",
+        scrub: true,
+      },
+      width: "0rem",
+    });
+
+    gsap.set(".achievement_1 .animated-svg *", {
+      opacity: 0,
+      drawSVG: "0%",
+    });
+
+    gsap.from(".achievement_1 .animated-svg *", {
+      scrollTrigger: {
+        trigger: ".achievement_1 .timeline_content_line",
+        start: "bottom 60%",
+        end: "bottom 50%",
+        onEnter: () => {
+          gsap.set(".achievement_1 .animated-svg *", {
+            drawSVG: "0%",
+          });
+          gsap.to(".achievement_1 .animated-svg *", {
+            drawSVG: "100%",
+            opacity: 1,
+            duration: 1,
+            stagger: 0.3,
+            ease: "none",
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(".achievement_1 .animated-svg *", {
+            opacity: 0,
+            duration: 0.5,
+          });
+          gsap.set(".achievement_1 .animated-svg *", {
+            drawSVG: "0",
+          });
+        },
+      },
+    });
+    gsap.set(".achievement_2 .animated-svg *", {
+      opacity: 0,
+      drawSVG: "0%",
+    });
+
+    gsap.from(".achievement_2 .animated-svg *", {
+      scrollTrigger: {
+        trigger: ".achievement_2 .timeline_content_line",
+        start: "bottom 60%",
+        end: "bottom 50%",
+        onEnter: () => {
+          gsap.set(".achievement_2 .animated-svg *", {
+            drawSVG: "0%",
+          });
+          gsap.to(".achievement_2 .animated-svg *", {
+            drawSVG: "100%",
+            opacity: 1,
+            duration: 1,
+            stagger: 0.3,
+            ease: "none",
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(".achievement_2 .animated-svg *", {
+            opacity: 0,
+            duration: 0.5,
+          });
+          gsap.set(".achievement_2 .animated-svg *", {
+            drawSVG: "0",
+          });
+        },
+      },
+    });
+        gsap.set(".achievement_3 .animated-svg *", {
+      opacity: 0,
+      drawSVG: "0%",
+    });
+
+    gsap.from(".achievement_3 .animated-svg *", {
+      scrollTrigger: {
+        trigger: ".achievement_3 .timeline_content_line",
+        start: "bottom 60%",
+        end: "bottom 50%",
+        onEnter: () => {
+          gsap.set(".achievement_3 .animated-svg *", {
+            drawSVG: "0%",
+          });
+          gsap.to(".achievement_3 .animated-svg *", {
+            drawSVG: "100%",
+            opacity: 1,
+            duration: 1,
+            stagger: 0.3,
+            ease: "none",
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(".achievement_3 .animated-svg *", {
+            opacity: 0,
+            duration: 0.5,
+          });
+          gsap.set(".achievement_3 .animated-svg *", {
+            drawSVG: "0",
+          });
+        },
+      },
+    });
+    3;
+    gsap.set(".achievement_1 .achivements_headings", {
+      opacity: 0,
+    });
+    gsap.from(".achievement_1 .achivements_headings", {
+      scrollTrigger: {
+        trigger: ".achievement_1 .timeline_content_line",
+        start: "top 60%",
+        end: "bottom 50%",
+        onEnter: () => {
+          gsap.set(".achievement_1 .achivements_headings", {
+            opacity: 0,
+          });
+
+          gsap.to(".achievement_1 .achivements_headings", {
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.2,
+            ease: "none",
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(".achievement_1 .achivements_headings", {
+            opacity: 0,
+          });
+        },
+      },
+    });
+    gsap.set(".achievement_2 .achivements_headings", {
+      opacity: 0,
+    });
+    gsap.from(".achievement_2 .achivements_headings", {
+      scrollTrigger: {
+        trigger: ".achievement_2 .timeline_content_line",
+        start: "top 60%",
+        end: "bottom 50%",
+        onEnter: () => {
+          gsap.set(".achievement_2 .achivements_headings", {
+            opacity: 0,
+          });
+
+          gsap.to(".achievement_2 .achivements_headings", {
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.2,
+            ease: "none",
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(".achievement_2 .achivements_headings", {
+            opacity: 0,
+          });
+        },
+      },
+    });
+    gsap.set(".achievement_3 .achivements_headings_wrapper", {
+      opacity: 0,
+    });
+    gsap.from(".achievement_3 .achivements_headings_wrapper", {
+      scrollTrigger: {
+        trigger: ".achievement_3 .timeline_content_line",
+        start: "top 60%",
+        end: "bottom 50%",
+        onEnter: () => {
+          gsap.set(".achievement_3 .achivements_headings_wrapper", {
+            opacity: 0,
+          });
+
+          gsap.to(".achievement_3 .achivements_headings_wrapper", {
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.2,
+            ease: "none",
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(".achievement_3 .achivements_headings_wrapper", {
+            opacity: 0,
+          });
+        },
+      },
+    });
+
+    gsap.to(".achievement_1 .about_timeline_dot", {
+      scrollTrigger: {
+        trigger: ".achievement_1 .about_timeline_dot",
+        start: "top 70%",
+        end: "bottom 70%",
+        scrub: true,
+      },
+      backgroundColor: "black",
+    });
+    gsap.to(".achievement_2 .about_timeline_dot", {
+      scrollTrigger: {
+        trigger: ".achievement_2 .about_timeline_dot",
+        start: "top 70%",
+        end: "bottom 70%",
+        scrub: true,
+      },
+      backgroundColor: "black",
+    });
+    gsap.to(".achievement_3 .about_timeline_dot", {
+      scrollTrigger: {
+        trigger: ".achievement_3 .about_timeline_dot",
+        start: "top 70%",
+        end: "bottom 70%",
+        scrub: true,
+      },
+      backgroundColor: "black",
+    });
+  });
+</script>
